@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Paper, TextField } from '@material-ui/core'
+// import {Paper, TextField } from '@material-ui/core'
 
 class SearchBar extends Component {
 
@@ -22,11 +22,14 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <Paper elevation={6} style={{padding:25}}>
-                <form onSubmit= {this.handleSubmit}>
-                    <TextField fullWidth label="Search..." onChange={this.handleChange}/>
-                </form>
-            </Paper>
+            <div className="row" style={{margin : 20}}>
+                <div className="input-field col s12">
+                    <form onSubmit= {this.handleSubmit}>
+                        <input id="search" type="text" onChange={this.handleChange} />
+                        <label className="active" htmlFor="search">Search</label>
+                    </form>
+                </div>
+            </div>
         );
     }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+// import { Grid } from "@material-ui/core";
 import VideoItem from "./VideoItem";
 
 const VideoList = ({ videos, onVideoSelect }) => {
@@ -11,9 +11,11 @@ const VideoList = ({ videos, onVideoSelect }) => {
     />
   ));
   return (
-    <Grid container spacing={10}>
-      {listOfVideos}
-    </Grid>
+    <div className="col s6">
+      <div className="row">
+        {listOfVideos}
+      </div>
+     </div>
   );
 }
 
